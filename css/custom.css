@@ -1,0 +1,99 @@
+.navbar-brand {
+    height: 70px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -10px;
+}
+
+.navbar-brand img {
+    height: 80px;
+}
+
+.navbar-nav li a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header {
+    background-position: center 0;
+}
+
+header .intro-text .intro-heading {
+    line-height: 38px;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+header .intro-text .intro-lead-in {
+    line-height: 42px;
+    font-size: 28px;
+    margin-bottom: 48px;
+}
+
+footer ul.social-buttons li a {
+    height: 60px;
+    width: 60px;
+    background-color: #4ea6b1;
+}
+
+footer ul.social-buttons li a:hover {
+    background-color: #44929c;
+}
+
+footer span.copyright {
+    color: white;
+    line-height: normal;
+    font-size: 9pt;
+}
+
+footer a.email-adress {
+    color: #4ea6b1;
+    font-size: 16pt;
+}
+
+footer a.email-adress:hover {
+    color: #222;
+    background-color: #44929c;
+    text-decoration: none;
+}
+
+.placeholder {
+    min-height: 250px;
+    min-width: 250px;
+    border: solid white 2px;
+}
+
+.bg-blue {
+    background-color: #4ea6b1;
+}
+
+#about {
+    padding: 0;
+}
+
+#about-padding-bearer {
+    padding: 150px 0;
+}
+
+#parallax-1 {
+    background-image: url(../img/angel.jpg);
+    height: 350px;
+}
+
+#parallax-2 {
+    background-image: url(../img/angel.jpg);
+    height: 350px;
+}
+
+.parallax-text {
+    line-height: 38px;
+    font-size: 38px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: white;
+    position: relative;
+    top: 50%;
+    border: solid 6px;
+    padding: 22px;
+}
