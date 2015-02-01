@@ -63,6 +63,11 @@ footer a.email-adress:hover {
     border: solid white 2px;
 }
 
+.gallery {
+    border: solid white 2px;
+    padding: 0px;
+}
+
 .bg-blue {
     background-color: #4ea6b1;
 }
