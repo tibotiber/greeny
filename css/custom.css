@@ -82,10 +82,14 @@ footer a.email-adress:hover {
 
 #parallax-1 {
     height: 350px;
+    padding-top: 190px;
+    padding-right: 50px;
 }
 
 #parallax-2 {
     height: 350px;
+    padding-top: 220px;
+    padding-right: 50px;
 }
 
 .parallax-text {
@@ -100,3 +104,20 @@ footer a.email-adress:hover {
     border: solid 6px;
     padding: 22px;
 }
+
+.parallax-quote p {
+    color: white;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.parallax-quote-marked {
+    font-style: italic;
+}
+
+.parallax-quote-marked:before {
+    content: '\201C';
+    font-size: 300%;
+    font-family: Times New Roman;
+    padding-right: 10px;
+} 
