@@ -68,6 +68,18 @@ footer a.email-adress:hover {
     padding: 0px;
 }
 
+.map {
+    background-image: url('../img/map.jpg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    .map {
+	background-image: url('../img/map@2x.jpg');
+    }
+}
+
 .bg-blue {
     background-color: #4ea6b1;
 }
