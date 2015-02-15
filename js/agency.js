@@ -24,9 +24,10 @@ $('body').scrollspy({
 // inspired by http://cutroni.com/blog/2012/02/21/advanced-content-tracking-with-google-analytics-part-1/
 var timer = 0;
 var callBackTime = 700;
-var debugTracker = false;
+var debugTracker = true;
 var currentItem = "";
 var score = 0;
+var order = 1;
 // update score (number of seconds in active view)
 Visibility.every(1000, function () {
     score++;
@@ -35,17 +36,24 @@ function trackLocation() {
     if(!debugTracker) {
 	ga('send', {
 	    'hitType': 'event',
-	    'eventCategory': 'Navigation',
+	    'eventCategory': 'Navigation (order)',
+	    'eventAction': '#'+currentItem,
+	    'eventValue': order
+	});
+	ga('send', {
+	    'hitType': 'event',
+	    'eventCategory': 'Duration (sec.)',
 	    'eventAction': '#'+currentItem,
 	    'eventValue': score
 	});
     } else {
-	console.log("You have viewed: #" + currentItem + " (" + score + " sec.)");
+	console.log("You have viewed: #" + currentItem + " (order " + order + ", " + score + " sec.)");
     }
     // determine current location
     currentItem = $(".nav li.active > a").text();
     // reset score
     score = 0;
+    order++;
 }
 $('body').on('activate.bs.scrollspy', function () {
     // Use a buffer so we don't call track location too often (high speed scroll)
