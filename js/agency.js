@@ -25,25 +25,27 @@ $('body').scrollspy({
 var timer = 0;
 var callBackTime = 700;
 var debugTracker = false;
-var startTime = new Date().getTime();
 var currentItem = "";
+var score = 0;
+// update score (number of seconds in active view)
+Visibility.every(1000, function () {
+    score++;
+});
 function trackLocation() {
-    var currentTime = new Date().getTime();
-    var timeToScroll = Math.round((currentTime - startTime) / 1000);
     if(!debugTracker) {
 	ga('send', {
 	    'hitType': 'event',
 	    'eventCategory': 'Navigation',
 	    'eventAction': '#'+currentItem,
-	    'eventValue': timeToScroll
+	    'eventValue': score
 	});
     } else {
-	console.log("You have viewed: #" + currentItem + " (" + timeToScroll + " sec.)");
+	console.log("You have viewed: #" + currentItem + " (" + score + " sec.)");
     }
     // determine current location
     currentItem = $(".nav li.active > a").text();
-    // reset duration
-    startTime = currentTime;
+    // reset score
+    score = 0;
 }
 $('body').on('activate.bs.scrollspy', function () {
     // Use a buffer so we don't call track location too often (high speed scroll)
