@@ -24,7 +24,7 @@ $('body').scrollspy({
 // inspired by http://cutroni.com/blog/2012/02/21/advanced-content-tracking-with-google-analytics-part-1/
 var timer = 0;
 var callBackTime = 700;
-var debugTracker = true;
+var debugTracker = false;
 var currentItem = "";
 var score = 0;
 var order = 1;
